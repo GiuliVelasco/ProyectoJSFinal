@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Equipamiento Marcial Mendoza - EMM Venta de productos para deportes de combate y gimnasios.">
+    <meta name="keywords"
+        content="Judo, defensa personal, jiujitsu, judo en Mendoza, clases de judo, federación, lucha, derribo, proyección, deportes de contacto, alto rendimiento, deporte olímpico, dojo">
+    <!-- link de bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- link al CSS -->
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- link a fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
+    <title>Tienda EMM</title>
+</head>
+<body>
+
+    <header>
+        <seccion class="navbar fondoheader">
+            <div class="container-fluid d-flex align-self-sm-start align-self-md-start justify-content-end">
+                <a href="../index.html">
+                    <img class="logo agrandar" src="img/emm.jpg" alt="Logo" class="d-inline-block align-text-top">
+                </a>
+            </div>
+    </header>
+
+    <main id="fondoMain">
+        <div class="container-fluid">
+            <h1>Equipamiento Marcial Mendoza</h1>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <form id="idForm" class="col-9">
+                    <fieldset>
+                        <legend> Envianos tus datos y enterate de las promos vigentes!</legend>
+                        <div>
+                            <label for="nombre"> Nombre y apellido </label>
+                            <input type="text" name="nombre" id="usernameId">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="email">Correo de contacto</label>
+                            <input type="email" required id="emailId" placeholder="ejemplo@gmail.com">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="edad">Edad</label>
+                            <input type="text" required id="edadId">
+                        </div>
+                        <br>
+                        <div>
+                            <input class="boton-form" type="submit" value="Enviar" id="enviarForm">
+                            <input class="boton-form" type="reset" value="Borrar">
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="col-3">
+                    <button id="botonDarkMode" class="btn btn-dark">Modo dark</button>
+                    <button id="botonLightMode" class="btn btn-light">Modo light</button>
+                </div>
+            </div>
+        </div>
+        <!-- Carrito con offcanvas -->
+        <section>
+            <br>
+            <a href="" role="buttom" id="botonVerCarrito" class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <img src="img/iconCarrito.png" width="60px" height="60px" alt="Ver carrito de compras">
+                <P>VER CARRITO</P>
+            </a>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel">Tu Carrito</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" id="idCarrito">
+                </div>
+            </div>
+        </section>
+        <br>
+        <!-- Seccion productos -->
+        <div class="container-fluid">
+            <section class="container-fluid d-flex flex-row flex-wrap justify-content-center">
+                <div class="container-fluid d-flex flex-row flex-wrap justify-content-center" id="divProductos"></div>
+            </section>
+        </div>
+    </main>
+    <footer class="fondofooter">
+        <div class="container-fluid">
+            <div class="row m-0">
+                <div class="col-6 text-right textoFooter">
+                    <p> Patricias Mendocinas 634 - Ciudad de Mendoza <br> Teléfono: (261)3610680 </p>
+                </div>
+                <!-- Section: Social media -->
+                <section class="mb-4 text-end col-6">
+                    <!-- Facebook -->
+                    <a class="btn btn-outline-light btn-floating m-1 botonFooter"
+                        href="https://www.facebook.com/equipamientomarcialmza" role="button" target="blank">
+                        <img height=30rem width=30rem src="../img/iconFacebook.png" alt="Icono de Facebook">
+                    </a>
+                    <!-- Instagram -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/equipamientomarcialmza/"
+                        target="blank" role="button">
+                        <img height="30rem" width="30rem" src="../img/iconInsta.png" alt="Icono de Instagram">
+                    </a>
+                </section>
+            </div>
+            <!-- Copyright -->
+            <div class="row text-center p-1 m-0" style="background-color: #1B1717">
+                <p class="copyright">Equipamiento Marcial Mendoza - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+    <!-- link js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.15/dist/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

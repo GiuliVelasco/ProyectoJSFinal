@@ -1,0 +1,40 @@
+//estilo para encabezados h1 de cada html
+@mixin encabezadosModoOscuro{
+    font-family: 'Roboto Slab', serif;;
+    font-size: 35px;
+    font-style: oblique;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px black;
+    text-transform: uppercase;
+    color: $color-ppal;
+    text-align: center;
+}
+
+@mixin encabezadosModoClaro{
+    font-family: 'Roboto Slab', serif;
+    font-size: 35px;
+    font-style: oblique;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px black;
+    text-transform: uppercase;
+    color: #1B1717;
+    text-align: center;
+}
+
+//estilo tarjetas de productos
+@mixin tarjeta {
+    background-color: $color-ppal;
+    margin-bottom: 30px;
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+//animacion logo
+@mixin animacion{
+    animation-name: agrandar;
+    animation-iteration-count: initial;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}

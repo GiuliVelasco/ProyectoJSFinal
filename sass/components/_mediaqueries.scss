@@ -1,0 +1,82 @@
+//pantalla celular
+@media screen and (min-width: 320px) and (max-width: 576px) {   
+    //mediaqueries de los h1
+    body{
+        .container-fluid{
+            .row{
+                h1{
+                    font-size: ($tamaño_letra)-10;
+                }
+            }
+        } 
+    }
+    //mediaqueries de la posición del logo
+    header{
+        .fondoheader{
+            .container-fluid{
+                display: flex;
+                align-self: end;
+            }
+        }
+    }
+    //mediaqueries de html tienda
+    main{
+        .container-fluid{
+            section{
+                .card{
+                    @include tarjeta;
+                    width: 30rem;
+                    .card-body{
+                        .card-title{
+                            font-family: 'Roboto', sans-serif;
+                            font-size: 18px;
+                            text-transform: uppercase;
+                            color: $color-terciario;
+                            text-align: center;
+                        }
+                        .card-text{
+                            font-size: 16px;
+                        }
+                        p{
+                            span{
+                                font-weight: bold;
+                            }
+                        }
+                        a{
+                            background-color: $color-terciario;
+                            border: 1px solid $color-terciario;
+                            font-family: 'Roboto', sans-serif;
+                            color: black;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//pantalla tablet 576 a 768
+@media screen and (min-width: 577px) and (max-width: 768px){
+    //mediaqueries de los h1
+    body{
+        .container-fluid{
+            .row{
+                h1{
+                    font-size: ($tamaño_letra)-5;
+                }
+            }
+        } 
+    }
+    
+    //mediaqueries de html tienda
+    main{
+        .container-fluid{
+            section{
+                .card{
+                    width: 20rem;
+                }
+            }
+        }
+    }
+}

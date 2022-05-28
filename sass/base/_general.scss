@@ -1,0 +1,116 @@
+@import "../components/variables";
+@import "../components/mixins";
+
+//Estilos del header
+header{
+    .fondoheader{
+        background-image: url(../img/123.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 300px;
+        .container-fluid{
+            a{
+                .logo{
+                    width: 80px;
+                    height: 80px;
+                    background-color: $color-ppal;
+                    @extend %bordes-icono;
+                    &:hover{
+                        @include animacion;
+                        @keyframes agrandar{    
+                            from{
+                            transform: scale(1.0);
+                            }
+                            to{
+                            transform:scale(1.1);
+                            }
+                        }
+                    }
+                }
+            }
+        }    
+    }
+}
+//Estilos del main
+main{
+    background-color: bisque;
+    div{
+        h1{
+            @include encabezadosModoClaro;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    div{
+        section{
+            #divProductos{
+                .card{
+                    @include tarjeta;
+                    width: 22rem;
+                    .card-body{
+                        .card-title{
+                            font-family: 'Roboto', sans-serif;
+                            font-size: 20px;
+                            text-transform: uppercase;
+                            color: $color-terciario;
+                            text-align: center;
+                        }
+                        p{
+                            .precio{
+                                font-weight: bold;
+                            }
+                        }
+                        a{
+                            background-color: $color-terciario;
+                            border: 1px solid $color-terciario;
+                            font-family: 'Roboto', sans-serif;
+                            color: black;
+                            font-weight: bold;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    
+}
+.modoOscuro{
+    background: linear-gradient(180deg, rgba(129,0,0,1) 0%, rgba(206,18,18,1) 80%);
+    div{
+        h1{
+            @include encabezadosModoOscuro;
+        }
+    }
+    div{
+        div{
+            #idForm{
+                color: $color-ppal;
+            }
+        }
+    }
+}
+
+//Estilos del footer
+.fondofooter{
+        background-color: $color-footer;
+        .container-fluid{
+            div{
+                color: $color-ppal;
+                section{
+                    .btn{
+                        background-color: $color-ppal;
+                        &:hover{
+                            background-color: $color-terciario;
+                        }
+                    }
+                }
+            }
+            div{
+                .copyright{
+                    color: $color-ppal;
+                    font-style: oblique;
+                }
+            }
+        }
+}

@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "nombre": "VENDAS SHIAI",
+        "color": "Blanco",
+        "talle": "Unico - 4 metros de longitud",
+        "precio": 1600,
+        "img": "img/vendasShiaiB.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "VENDAS SHIAI",
+        "color": "Negro",
+        "talle": "Unico - 4 metros de longitud",
+        "precio": 1600,
+        "img": "img/vendasShiaiN.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "TIBIALES QST SP 3542",
+        "color": "Negro",
+        "talle": "XL - Dimensiones: 58×18×18cm",
+        "precio": 11000,
+        "img": "img/tibialesQSTSP3542.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "TIBIALES QST SP 3542",
+        "color": "Amarillo",
+        "talle": "L - Dimensiones: 58×18×18cm",
+        "precio": 11000,
+        "img": "img/tibialesQSTSP3542.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "GUANTES PRG 3713",
+        "color": "Blanco",
+        "talle": "12 oz - Dimensiones: 40×15×20cm",
+        "precio": 13000,
+        "img": "img/guantesPRG3713.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "GUANTES TRG 3281",
+        "color": "Negro con Blanco",
+        "talle": "12 Oz - Dimensiones: 40×15×20cm",
+        "precio": 10500,
+        "img": "img/tibialesQSTSP3542.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "GUANTES PRG 3325 N/B",
+        "color": "Negro",
+        "talle": "12 Oz - Dimensiones: 40×15×20cm",
+        "precio": 10600,
+        "img": "img/tibialesQSTSP3542.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "GUANTES PRG 3325 R",
+        "color": "Rojo",
+        "talle": "12 Oz - Dimensiones: 40×15×20cm",
+        "precio": 10600,
+        "img": "img/tibialesQSTSP3542.jpg"
+    },
+    {
+        "id": 9,
+        "nombre": "GUANTES PRG 3325 AM",
+        "color": "Amarillo",
+        "talle": "12 Oz - Dimensiones: 40×15×20cm",
+        "precio": 10600,
+        "img": "img/tibialesQSTSP3542.jpg"
+    }
+]
