@@ -1,18 +1,3 @@
-class Usuario {
-    constructor(nombreCompleto, email, edad){
-        this.nombreCompleto = nombreCompleto;
-        this.email = email;
-        this.edad = edad;
-    }
-}
-
-let usuarios = [];
-if(localStorage.getItem('Usuarios')){
-    usuarios = JSON.parse(localStorage.getItem('Usuarios'));
-} else{
-    localStorage.setItem('Usuarios', JSON.stringify(usuarios));
-}
-
 let formulario = document.getElementById('idForm');
 let divProductos = document.querySelector('#divProductos');
 let botonDarkMode = document.getElementById('botonDarkMode');
@@ -43,33 +28,38 @@ function modoPantalla(){
     })
 }
 //formulario
-formulario.addEventListener('submit',(event) =>{
+formulario.addEventListener('submit', (event) => {
     event.preventDefault()
-    let nombreCompleto = document.getElementById('usernameId').value
-    let email = document.getElementById('emailId').value
-    let edad = document.getElementById('edadId').value
-    let objetoUsuario = {nombreCompleto: nombreCompleto, email: email, edad: edad}
-    usuarios.push(objetoUsuario)
-    localStorage.setItem('Usuarios', JSON.stringify(usuarios))
-    console.log(usuarios)
+    //envío de datos del form mediante api
+    enviarForm.value = 'Enviando...';
+    const serviceID = 'default_service';
+    const templateID = 'contact_form';
+    emailjs.sendForm(serviceID, templateID, '#idForm')
+    .then(() => {
+        enviarForm.value = 'Enviar';
+        Swal.fire({
+            icon: 'success',
+            title: 'Gracias por contactarnos!',
+            text: 'En breve te enviaremos más info de nuestras promos.',
+        });
+    }, (err) => {
+        enviarForm.value = 'Enviar';
+        alert(JSON.stringify(err));
+    })
 })
 
-enviarForm.addEventListener("click",() => {
-    Swal.fire({
-        icon: 'success',
-        title: 'Gracias por contactarnos!',
-        text: 'En breve te enviaremos más info de nuestras promos.',
-      });
-})
 //seccion productos
 function mostrarCardsProd(){
     fetch('productos.json')
     .then(response => response.json())
     .then(productos => {
         productos.forEach((productos) => {
-            let {id, nombre, color, talle, precio} = productos
+            let {id, nombre, color, talle, precio, img} = productos
             divProductos.innerHTML += `
                 <div class="card">
+                    
+                    <img class="imgProd" src="${img}">
+                    
                     <div class="card-body">
                         <p class="card-title">${nombre.toUpperCase()}</p>
                         <p class="card-text">Color: ${color}.<br>Talle: ${talle}
@@ -134,14 +124,21 @@ function pintarCarrito() {
             <div class="card-body">
                 <p class="card-title">${element.nombre.toUpperCase()}</p>
                 <p class="card-text">Color: ${element.color}.<br>Talle: ${element.talle}
-                <br><span class="precio">Precio unitario $ ${element.precio}</span> - Cantidad: ${element.cantComprada}</p>
+                <br><span class="precio">Precio unitario $ ${element.precio}</span> <br> Cantidad: ${element.cantComprada}</p>
                 <p>Subtotal: $ ${element.precio * element.cantComprada}</p>
-                <button class="botonBorrar" id="${element.id}}">Eliminar</button>
+                <button type="button" class="botonBorrar btn btn-outline-danger" id="${element.id}">X</button>
             </div>
         </div>
         `
     });
+    const total = arrayCarrito.reduce((acc, elemento)=> acc + elemento.precio*elemento.cantComprada, 0);
+    idCarrito.innerHTML += `
+        <br><p>Total: $ ${total}</p>
+        <p>Total + IVA: $ ${total * 1.21}</p>
+        <br><button type="button" class="botonFinalizar btn btn-success">Comprar</button>
+    `
     borrarProducto();
+    finalizarCompra();
 }
 
 botonVerCarrito.addEventListener('click', (event)=>{
@@ -154,7 +151,6 @@ function borrarProducto() {
     botonBorrarProd.forEach((element) => {
         element.addEventListener("click", (e) => {
             let id = parseInt(e.target.id);
-            console.log(id);
             arrayCarrito = arrayCarrito.filter((element) => {
                 return element.id !== id; //le pido que retorne el carrito con lo elementos cuyo id sea diferente al seleccionado para eliminar
             });
@@ -164,5 +160,13 @@ function borrarProducto() {
     });
 }
 
+function finalizarCompra() {
+    let botonFinalizar = document.querySelector('.botonFinalizar');
+    botonFinalizar.addEventListener("click",(e) => {
+        e.preventDefault();
+        arrayCarrito.splice(0,arrayCarrito.length);
+        pintarCarrito();
+    });
+}
 mostrarCardsProd();
 modoPantalla();

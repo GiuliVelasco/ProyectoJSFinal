@@ -5,7 +5,7 @@
         "color": "Blanco",
         "talle": "Unico - 4 metros de longitud",
         "precio": 1600,
-        "img": "img/vendasShiaiB.jpg"
+        "img": "img/vendasShiaiB.png"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "color": "Negro",
         "talle": "Unico - 4 metros de longitud",
         "precio": 1600,
-        "img": "img/vendasShiaiN.jpg"
+        "img": "img/vendasShiaiN.png"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "color": "Negro",
         "talle": "XL - Dimensiones: 58×18×18cm",
         "precio": 11000,
-        "img": "img/tibialesQSTSP3542.jpg"
+        "img": "img/tibialesQSTSP3542N.png"
     },
     {
         "id": 4,
@@ -29,31 +29,31 @@
         "color": "Amarillo",
         "talle": "L - Dimensiones: 58×18×18cm",
         "precio": 11000,
-        "img": "img/tibialesQSTSP3542.jpg"
+        "img": "img/tibialesQSTSP3542.png"
     },
     {
         "id": 5,
         "nombre": "GUANTES PRG 3713",
-        "color": "Blanco",
+        "color": "Blanco con rosa",
         "talle": "12 oz - Dimensiones: 40×15×20cm",
         "precio": 13000,
-        "img": "img/guantesPRG3713.jpg"
+        "img": "img/guantesPRG3713.png"
     },
     {
         "id": 6,
         "nombre": "GUANTES TRG 3281",
-        "color": "Negro con Blanco",
+        "color": "Negro con blanco",
         "talle": "12 Oz - Dimensiones: 40×15×20cm",
         "precio": 10500,
-        "img": "img/tibialesQSTSP3542.jpg"
+        "img": "img/guanteTRG3281.png"
     },
     {
         "id": 7,
-        "nombre": "GUANTES PRG 3325 N/B",
+        "nombre": "GUANTES PRG 3325 N",
         "color": "Negro",
         "talle": "12 Oz - Dimensiones: 40×15×20cm",
         "precio": 10600,
-        "img": "img/tibialesQSTSP3542.jpg"
+        "img": "img/guantesPRG3325N.png"
     },
     {
         "id": 8,
@@ -61,7 +61,7 @@
         "color": "Rojo",
         "talle": "12 Oz - Dimensiones: 40×15×20cm",
         "precio": 10600,
-        "img": "img/tibialesQSTSP3542.jpg"
+        "img": "img/guantesPRG3325R.png"
     },
     {
         "id": 9,
@@ -69,6 +69,6 @@
         "color": "Amarillo",
         "talle": "12 Oz - Dimensiones: 40×15×20cm",
         "precio": 10600,
-        "img": "img/tibialesQSTSP3542.jpg"
+        "img": "img/guantesPRG3325AM.png"
     }
 ]

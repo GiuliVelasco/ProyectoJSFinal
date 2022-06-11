@@ -21,7 +21,7 @@ header .fondoheader {
     transform: scale(1.1); } }
 
 main {
-  background-color: bisque; }
+  background-color: #EEEBDD; }
   main div h1 {
     font-family: 'Roboto Slab', serif;
     font-size: 35px;
@@ -31,15 +31,25 @@ main {
     text-transform: uppercase;
     color: #1B1717;
     text-align: center;
+    margin-bottom: 2rem;
     padding-top: 20px;
     padding-bottom: 20px; }
+  main section div #botonVerCarrito {
+    padding: 0.375rem 0.375rem;
+    margin-top: 1rem;
+    border: 1px solid black;
+    box-shadow: none; }
   main div section #divProductos .card {
     background-color: #EEEBDD;
     margin-bottom: 30px;
     margin-top: 0px;
     margin-left: 20px;
     margin-right: 20px;
-    width: 22rem; }
+    width: 22rem;
+    align-items: center;
+    padding-top: 0.5rem; }
+    main div section #divProductos .card .imgProd {
+      width: 21rem; }
     main div section #divProductos .card .card-body .card-title {
       font-family: 'Roboto', sans-serif;
       font-size: 20px;
@@ -65,7 +75,8 @@ main {
     text-shadow: 2px 2px 5px black;
     text-transform: uppercase;
     color: #EEEBDD;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 2rem; }
   .modoOscuro div div #idForm {
     color: #EEEBDD; }
 

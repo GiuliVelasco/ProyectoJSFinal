@@ -33,12 +33,22 @@ header{
 }
 //Estilos del main
 main{
-    background-color: bisque;
+    background-color: #EEEBDD;
     div{
         h1{
             @include encabezadosModoClaro;
             padding-top: 20px;
             padding-bottom: 20px;
+        }
+    }
+    section{
+        div{
+            #botonVerCarrito{
+                padding: 0.375rem 0.375rem;
+                margin-top: 1rem;
+                border: 1px solid black;
+                box-shadow: none;
+            }
         }
     }
     div{
@@ -47,6 +57,11 @@ main{
                 .card{
                     @include tarjeta;
                     width: 22rem;
+                    align-items: center;
+                    padding-top: 0.5rem;
+                    .imgProd{
+                        width: 21rem;
+                    }
                     .card-body{
                         .card-title{
                             font-family: 'Roboto', sans-serif;

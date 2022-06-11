@@ -31,26 +31,31 @@
 
     <main id="fondoMain">
         <div class="container-fluid">
-            <h1>Equipamiento Marcial Mendoza</h1>
+            <h1>Bienvenido a Equipamiento Marcial Mendoza</h1>
         </div>
         <div class="container-fluid">
             <div class="row">
                 <form id="idForm" class="col-9">
                     <fieldset>
-                        <legend> Envianos tus datos y enterate de las promos vigentes!</legend>
+                        <legend> Contactanos y enterate de las promos vigentes!</legend>
                         <div>
                             <label for="nombre"> Nombre y apellido </label>
-                            <input type="text" name="nombre" id="usernameId">
+                            <input type="text" required name="nombre" id="usernameId">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="telefono">Teléfono Movil</label>
+                            <input type="text" required name="telefono" id="telefonoId">
                         </div>
                         <br>
                         <div>
                             <label for="email">Correo de contacto</label>
-                            <input type="email" required id="emailId" placeholder="ejemplo@gmail.com">
+                            <input type="email" required name="email" id="emailId" placeholder="ejemplo@gmail.com">
                         </div>
                         <br>
                         <div>
                             <label for="edad">Edad</label>
-                            <input type="text" required id="edadId">
+                            <input type="text" required name="edad" id="edadId">
                         </div>
                         <br>
                         <div>
@@ -65,13 +70,18 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            emailjs.init('LbhMPI--MFIb6W6LP')
+        </script>
         <!-- Carrito con offcanvas -->
         <section>
-            <br>
-            <a href="" role="buttom" id="botonVerCarrito" class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                <img src="img/iconCarrito.png" width="60px" height="60px" alt="Ver carrito de compras">
-                <P>VER CARRITO</P>
-            </a>
+            <div class="container-fluid">                  
+                <a href="" role="buttom" id="botonVerCarrito" class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <img src="img/iconCarrito.png" width="50px" height="50px" alt="carrito de compras">
+                </a>
+            </div>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div class="offcanvas-header">
                     <h5 id="offcanvasRightLabel">Tu Carrito</h5>
@@ -105,7 +115,7 @@
                     <!-- Instagram -->
                     <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/equipamientomarcialmza/"
                         target="blank" role="button">
-                        <img height="30rem" width="30rem" src=img/iconInsta.png" alt="Icono de Instagram">
+                        <img height="30rem" width="30rem" src="img/iconInsta.png" alt="Icono de Instagram">
                     </a>
                 </section>
             </div>
