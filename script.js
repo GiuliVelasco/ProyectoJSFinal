@@ -47,7 +47,6 @@ formulario.addEventListener('submit', (event) => {
         alert(JSON.stringify(err));
     })
 })
-
 //seccion productos
 function mostrarCardsProd(){
     fetch('productos.json')
@@ -57,9 +56,7 @@ function mostrarCardsProd(){
             let {id, nombre, color, talle, precio, img} = productos
             divProductos.innerHTML += `
                 <div class="card">
-                    
-                    <img class="imgProd" src="${img}">
-                    
+                    <img class="imgProd img-fluid" src="${img}">
                     <div class="card-body">
                         <p class="card-title">${nombre.toUpperCase()}</p>
                         <p class="card-text">Color: ${color}.<br>Talle: ${talle}
@@ -165,6 +162,7 @@ function finalizarCompra() {
     botonFinalizar.addEventListener("click",(e) => {
         e.preventDefault();
         arrayCarrito.splice(0,arrayCarrito.length);
+        localStorage.setItem('carrito', JSON.stringify(arrayCarrito));
         pintarCarrito();
     });
 }
